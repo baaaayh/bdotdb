@@ -11,6 +11,8 @@ RUN yarn
 
 # 소스 복사 및 빌드
 COPY . .
+RUN rm -rf node_modules
+RUN rm package-lock.json
 RUN yarn build
 
 # 80번 포트 노출 및 애플리케이션 실행
