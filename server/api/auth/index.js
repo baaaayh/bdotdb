@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
 		const user = await Manage.findOne({ id: id });
 
 		if (user && (await bcrypt.compare(pw, user.pw))) {
-			const token = jwt.sign({ id: user.id }, '', { expiresIn: '1h' });
+			const token = jwt.sign({ id: user.id }, 'bdot', { expiresIn: '1h' });
 
 			setCookie(event, 'access_token', token, {
 				path: '/',
