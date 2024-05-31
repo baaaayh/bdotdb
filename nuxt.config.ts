@@ -3,7 +3,7 @@ export default defineNuxtConfig({
 		baseURL: '/nuxt3/',
 		buildAssetsDir: 'public',
 	},
-	ssr: false,
+	ssr: true,
 	devtools: { enabled: true },
 	css: ['@/public/scss/common.scss'],
 	modules: ['nuxt-server-utils', 'nuxt-mongoose', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
