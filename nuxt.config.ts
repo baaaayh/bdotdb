@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
 	ssr: true,
-	devtools: { enabled: true },
+	devtools: { enabled: false },
 	css: ['@/public/scss/common.scss'],
 	modules: ['nuxt-server-utils', 'nuxt-mongoose', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
 	runtimeConfig: {

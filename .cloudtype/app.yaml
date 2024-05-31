@@ -1,0 +1,13 @@
+name: nuxtjs
+app: node@20
+options:
+    env:
+        - name: NODE_ENV
+          value: production
+    ports: 3000
+    build: yarn build
+context:
+    git:
+        url: https://github.com/baaaayh/bdotdb.git
+        branch: main
+    preset: nuxt.js
