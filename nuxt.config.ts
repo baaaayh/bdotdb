@@ -15,7 +15,6 @@ export default defineNuxtConfig({
 		MONGODB_URI: 'mongodb+srv://baaaayh:baaaayh11@database.ud2ydem.mongodb.net/bdot',
 	},
 	nitro: {
-		preset: 'node-server',
 		plugins: ['@/server/db/index.ts'],
 	},
 	mongoose: {
