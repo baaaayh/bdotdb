@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+    nuxt3-app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - '3000:3000'
+        depends_on:
+            - mongodb
+        environment:
+            MONGO_URI: 'mongodb://nuxt3-mongodb-1:27017/bdot' # MongoDB 연결 URI 설정
+        volumes:
+            - ./dist:/usr/share/nginx/html # 로컬 디렉토리와 컨테이너 내부의 애플리케이션 디렉토리를 연결합니다.
+
+    mongodb:
+        image: mongo:latest
+        ports:
+            - '27017:27017'
+        volumes:
+            - mongodb-data:/data/db # MongoDB 데이터 디렉토리를 볼륨으로 마운트합니다.
+
+volumes:
+    mongodb-data:
