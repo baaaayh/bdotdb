@@ -13,7 +13,6 @@ export default defineNuxtConfig({
 		},
 		publicAssets: ['@/public/uploads'],
 		MONGODB_URI: 'mongodb+srv://baaaayh:baaaayh11@database.ud2ydem.mongodb.net/bdot',
-		nitroPort: process.env.NITRO_PORT || 3000,
 	},
 	nitro: {
 		preset: 'node-server',
